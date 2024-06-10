@@ -19,7 +19,7 @@ export const Cryptocurrencies = ({ simplified }) => {
 
 
 
-  console.log(cryptos);
+  // console.log(cryptos);
 
   return (
     <>
