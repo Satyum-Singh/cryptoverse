@@ -1,21 +1,20 @@
-const NewsAPI = require("newsapi");
-const newsapi = new NewsAPI("a50a5f5c3ece450f802bfd43ff7f739d");
-// To query /v2/top-headlines
-// All options passed to topHeadlines are optional, but you need to include at least one of them
-newsapi.v2
-  .topHeadlines({
-    sources: "bbc-news,the-verge",
-    q: "bitcoin",
-    category: "business",
-    language: "en",
-    country: "us",
-  })
-  .then((response) => {
-    console.log(response);
-    /*
-    {
-      status: "ok",
-      articles: [...]
-    }
-  */
-  });
+export const fetchCryptoNews = async (
+  newsCategory,
+  count,
+  searchQuery,
+  sortBy
+) => {
+  const apiKey = "a50a5f5c3ece450f802bfd43ff7f739d";
+
+  const response = await fetch(
+    `https://newsapi.org/v2/everything?q=${
+      newsCategory || searchQuery
+    }&pageSize=${count}&sortBy=${sortBy}&apiKey=${apiKey}`
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch news data");
+  }
+
+  return response.json();
+};
