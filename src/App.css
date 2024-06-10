@@ -377,3 +377,27 @@ width: 70%;
     padding: 20px;
     align-items: center;
 }
+
+.news-filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.news-search {
+  flex: 1;
+  max-width: 400px;
+}
+
+.news-select {
+  min-width: 200px;
+}
+
+.crypto-card-container {
+  margin-top: 20px;
+}
+
+.crypto-card {
+  margin-bottom: 20px;
+}

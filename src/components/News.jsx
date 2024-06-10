@@ -42,30 +42,41 @@ export const News = ({ simplified }) => {
 
   return (
     <>
-      <div style={{ marginBottom: 20 }}>
-        <Search
-          placeholder="Search for crypto news"
-          enterButton="Search"
-          size="large"
-          onSearch={handleSearch}
-        />
-        <Select
-          defaultValue="Cryptocurrency"
-          style={{ width: 200, margin: 10, }}
-          onChange={(value) => setCategory(value)}
-        >
-          <Option value="Cryptocurrency">Cryptocurrency</Option>
-          <Option value="Blockchain">Blockchain</Option>
-        </Select>
-        <Select
-          defaultValue="Sort By"
-          style={{ width: 200, margin: 10 }}
-          onChange={handleSortChange}
-        >
-          <Option value="publishedAt">Latest</Option>
-          <Option value="-publishedAt">Earliest</Option>
-        </Select>
-      </div>
+      {!simplified && (
+        <div className="news-filters">
+          <Search
+            placeholder="Search for crypto news"
+            enterButton="Search"
+            size="middle"
+            onSearch={handleSearch}
+            className="news-search"
+          />
+          <Select
+            defaultValue="Cryptocurrency"
+            style={{ width: 150, margin: '0 10px', }}
+            onChange={(value) => setCategory(value)}
+            size='middle'
+            className="news-select"
+          >
+            <Option value="Cryptocurrency">Cryptocurrency</Option>
+            <Option value="Blockchain">Blockchain</Option>
+            <Option value="Finance">Finance</Option>
+            <Option value="Technology">Technology</Option>
+            <Option value="Regulation">Regulation</Option>
+            <Option value="Industry Updates">Industry Updates</Option>
+          </Select>
+          <Select
+            defaultValue="Sort By"
+            style={{ width: 150 }}
+            onChange={handleSortChange}
+            size='middle'
+            className="news-select"
+          >
+            <Option value="publishedAt">Latest</Option>
+            <Option value="-publishedAt">Earliest</Option>
+          </Select>
+        </div>
+      )}
       <Row gutter={[24, 24]} className='crypto-card-container'>
         {cryptoNews.map((news, i) => (
           <Col xs={24} sm={12} lg={8} key={i} className="crypto-card">
