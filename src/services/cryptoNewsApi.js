@@ -4,7 +4,7 @@ export const fetchCryptoNews = async (
   searchQuery,
   sortBy
 ) => {
-  const apiKey = "a50a5f5c3ece450f802bfd43ff7f739d";
+  const apiKey = process.env.News_Api_Key;
 
   const response = await fetch(
     `https://newsapi.org/v2/everything?q=${
