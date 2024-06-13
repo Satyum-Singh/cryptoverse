@@ -1,11 +1,27 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from "react-router-dom";
 import { HomeOutline, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined, HomeOutlined } from "@ant-design/icons";
 import icon from '../images/cryptocurrency.png';
 
 export const Navbar = () => {
+    const[activeMenu,setActiveMenu]=useState(true);
+    const[screenSize,setScreenSize]=useState(null);
+
+    useEffect(()=>{
+        const handleResize=()=>setScreenSize(window.innerWidth);
+        window.addEventListener('resize',handleResize);
+        handleResize();
+        return ()=>window.removeEventListener('resize',handleResize);
+    },[])
+
+    useEffect(()=>{
+        if(screenSize<768) setActiveMenu(false);
+        else setActiveMenu(true);
+    },[screenSize])
+
+
     return (
         <div className="nav-container">
             <div className="logo-container">
@@ -17,6 +33,8 @@ export const Navbar = () => {
                     <MenuOutlined />
                 </Button> */}
             </div>
+            {activeMenu && }
+
             <Menu theme="dark" mode="inline">
                 <Menu.Item icon={<HomeOutlined />}>
                     <Link to="/">Home</Link>

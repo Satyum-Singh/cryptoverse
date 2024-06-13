@@ -83,10 +83,11 @@ export const News = ({ simplified }) => {
             <Card hoverable className="news-card">
               <a href={news.url} target="_blank" rel="noreferrer">
                 <div className="news-image-container">
-                  <Title className="news-title" level={4}>{news.title}</Title>
+                  <Title className="news-title" level={4}>{news.title && news.title.length > 60 ? `${news.title.substring(0, 40)}...` : news.title}</Title>
+
                   <img src={news.urlToImage} alt="news" className="img" />
                 </div>
-                <p>{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
+                <p>{news.description && news.description.length > 200 ? `${news.description.substring(0, 100)}...` : news.description}</p>
                 <div className="provider-container">
                   <div>
                     <Avvvatars value={news.source.name} displayValue={news.source.name.slice(0, 2).toUpperCase()} />
