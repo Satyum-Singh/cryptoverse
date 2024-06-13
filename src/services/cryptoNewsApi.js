@@ -1,8 +1,15 @@
-const apiKey = process.env.apiKey;
+const apiKey = "a50a5f5c3ece450f802bfd43ff7f739d";
 
-export const fetchCryptoNews = async (newsCategory, count, sortBy) => {
+export const fetchCryptoNews = async (
+  newsCategory,
+  count,
+  searchQuery,
+  sortBy
+) => {
   const response = await fetch(
-    `https://newsapi.org/v2/everything?q=${newsCategory}&pageSize=${count}&sortBy=${sortBy}&apiKey=${apiKey}`
+    `https://newsapi.org/v2/everything?q=${
+      newsCategory || searchQuery
+    }&pageSize=${count}&sortBy=${sortBy}&apiKey=${apiKey}`
   );
 
   if (!response.ok) {
