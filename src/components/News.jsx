@@ -45,13 +45,13 @@ export const News = ({ simplified }) => {
     <>
       {!simplified && (
         <div className="news-filters">
-          <Search
+          {/* <Search
             placeholder="Search for crypto news"
             enterButton="Search"
             size="middle"
             onSearch={handleSearch}
             className="news-search"
-          />
+          /> */}
           <Select
             defaultValue="Cryptocurrency"
             style={{ width: 150, margin: '0 10px', }}
