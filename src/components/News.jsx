@@ -3,6 +3,7 @@ import { Typography, Row, Col, Card, Input, Select } from 'antd';
 import moment from 'moment';
 import { fetchCryptoNews } from '../services/cryptoNewsApi';
 import Avvvatars from 'avvvatars-react'
+import Loader from './Loader';
 
 const { Text, Title } = Typography;
 const { Search } = Input;
@@ -38,7 +39,7 @@ export const News = ({ simplified }) => {
     setSortBy(value);
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loader />
 
   return (
     <>
