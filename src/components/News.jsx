@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Row, Col, Card, Input, Select } from 'antd';
+import { Typography, Row, Col, Card, Select } from 'antd';
 import moment from 'moment';
 import { fetchCryptoNews } from '../services/cryptoNewsApi';
 import Avvvatars from 'avvvatars-react'
 import Loader from './Loader';
 
 const { Text, Title } = Typography;
-const { Search } = Input;
 const { Option } = Select;
 
 export const News = ({ simplified }) => {
@@ -32,9 +31,6 @@ export const News = ({ simplified }) => {
     getCryptoNews();
   }, [count, category, searchQuery, sortBy]);
 
-  const handleSearch = (value) => {
-    setSearchQuery(value);
-  };
   const handleSortChange = (value) => {
     setSortBy(value);
   };
@@ -45,13 +41,6 @@ export const News = ({ simplified }) => {
     <>
       {!simplified && (
         <div className="news-filters">
-          {/* <Search
-            placeholder="Search for crypto news"
-            enterButton="Search"
-            size="middle"
-            onSearch={handleSearch}
-            className="news-search"
-          /> */}
           <Select
             defaultValue="Cryptocurrency"
             style={{ width: 150, margin: '0 10px', }}
