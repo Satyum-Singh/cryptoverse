@@ -1,7 +1,13 @@
 {
   "short_name": "Crypto Verse",
-  "name": "A Currency Chronicle App",
+  "name": "Crypto Verse",
   "icons": [
+    {
+      "src":"maskable.png",
+      "sizes":"196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
