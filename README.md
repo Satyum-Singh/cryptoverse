@@ -1,34 +1,43 @@
-# 💰 Cryptoverse: A Real-Time Portal to stay updated with Blockchain world
+# 💰 Cryptoverse: A Real-Time Portal to Stay Updated with the Blockchain World
 
-## 👀[Demo Link]()
+## 👀 [Demo Link](https://crypto-verse-pwa.vercel.app/)
 
-I built this comprehensive React application to stay ahead of the curve in the crypto world. Real-time data, insightful news, and in-depth analysis.
+Welcome to Cryptoverse! This comprehensive React application is designed to keep you ahead in the ever-evolving crypto world, offering real-time data, insightful news, and in-depth analysis.
 
 ## 🔑 Key Features:
 
-- 🚚 **Live Market Data**: Track current prices, charts, and historical trends for hundreds of cryptocurrencies through API [(Coinranking Rapid API)](https://rapidapi.com/Coinranking/api/coinranking1).
-- 🧠 **Smart News**: You can read and filter the news base on your prefrence of coin [(News API)](https://newsapi.org/).
-- 📉 **Interactive Charts and Analysis**: Can visually see price changes with interactive charts (Chart.js JS Library).
-- 🧐 **Cryptocurrency Details**: More detailed info about coins including their exchanges [(Coingeko REST API)](https://www.coingecko.com/en/api), history, and key metrics.
-- 📲 **User-Friendly and Responsive Design**: Responsive and user-friendly interface built with ANTD UI.
-- 🧑‍💼 **Data Management**: Used (Redux-Toolkit + RTK Query) for efficient state management and API calls, for smooth and responsive user experience.
-- 🔐 **Secure API Key Handling**: For protecting my API keys through an .env file, prioritizing security and privacy.
+- 🚚 **Live Market Data**: Track current prices, charts, and historical trends for hundreds of cryptocurrencies via the [Coinranking Rapid API](https://rapidapi.com/Coinranking/api/coinranking1).
+- 🧠 **Smart News**: Stay informed with news that can be filtered based on your preferred coin using the [News API](https://newsapi.org/).
+- 📉 **Interactive Charts and Analysis**: Visualize price changes with interactive charts powered by Chart.js.
+- 🧐 **Cryptocurrency Details**: Access detailed information about coins, including their exchanges, history, and key metrics through the [Coingeko REST API](https://www.coingecko.com/en/api).
+- 📲 **User-Friendly and Responsive Design**: Enjoy a seamless experience with a responsive interface built using ANTD UI.
+- 🧑‍💼 **Data Management**: Experience efficient state management and API calls with Redux-Toolkit and RTK Query, ensuring a smooth and responsive user experience.
+- 🔐 **Secure API Key Handling**: Protect your API keys with an .env file, prioritizing security and privacy.
+- 📱 **Progressive Web App (PWA)**: Install Cryptoverse as a mobile app for offline access and a native app-like experience.
 
-## 👩‍💻 Technologies I Used
+## 👩‍💻 Technologies Used
 
 - `React`
 - `Redux-Toolkit`
-- `Redux Query`
+- `RTK Query`
 - `REST API + Rapid API`
-- `Antdesign` (UI Framework of React)
+- `Ant Design` (UI Framework of React)
 - `HTML/JSX`
 - `CSS`
 - `JavaScript`
+- `Chart.js`
+- `PWA`
 
-## ✍️ Process
+## ✍️ Development Process
 
-🤠 My API playground: Eager to get my hands dirty with APIs and Redux Toolkit, I decided to build a crypto app as my testbed. First, I scoured RapidAPI for free data sources and crafted a clean layout, complete with slick routing and a trusty Redux store. The homepage served as a launchpad, offering glimpses into the Cryptocurrencies and News pages.
+### 🤠 My API Playground
+Eager to dive into APIs and Redux Toolkit, I chose to build Cryptoverse as my testbed. I started by exploring RapidAPI for free data sources and crafting a clean layout, complete with smooth routing and a robust Redux store. The homepage serves as a launchpad, offering glimpses into the Cryptocurrencies and News pages.
 
-😵 Next, I tackled the Cryptocurrencies page, showcasing 100 digital coins in all their glory. But I didn't stop there! The Cryptodetails page unveiled each coin's hidden depths, including mesmerizing historical price charts powered by Chart.js (thanks Javascript Mastery). News was another beast, and I built a dynamic feed with a handy filter, letting you zero in on the latest buzz around specific coins. Finally, the Exchange page rounded things off, displaying exchange options and stats for every crypto – a one-stop shop for all your trading needs.
+### 😵 Cryptocurrency Showcase
+On the Cryptocurrencies page, I showcased 100 digital coins in all their glory. The Cryptodetails page dives deeper, revealing each coin's historical price charts powered by Chart.js, thanks to inspiration from JavaScript Mastery. The News page features a dynamic feed with filters to keep you updated on specific coins. Finally, the Exchange page provides a one-stop shop for all trading needs, displaying exchange options and stats for every crypto.
 
-😀 This project was a wild ride, but every API hurdle and Redux puzzle I conquered made it worth it.
+### 😀 The Journey
+This project was a wild ride, with every API challenge and Redux puzzle making it worth the effort. Adding PWA functionality was the cherry on top, allowing users to install Cryptoverse as a mobile app and access it offline, enhancing the user experience.
+
+## 📲 Progressive Web App (PWA)
+Cryptoverse is not just a web app; it's also a PWA! This means you can install it on your mobile device and enjoy offline access, giving you the convenience of a native app-like experience. This feature makes it easier to stay updated with the latest in the crypto world, even when you're on the go.
